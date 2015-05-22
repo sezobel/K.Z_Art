@@ -1,0 +1,28 @@
+<div class="center">
+
+<!-- below is the loop added for our listings because we don't know how many there will be we need the loop to be able to add as many as we'll need but still have them all set to the same amount of rows and colmns in each table -->
+  <div class="row">
+    <% @listings.each do |listing| %>
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <%= image_tag listing.image.url %>
+            <div class="caption">
+            <h3><%= listing.name %></h3>
+            <p><%= number_to_currency(listing.price) %></p>
+            <%= link_to 'View', listing, class: "btn btn-link" %><br>
+            <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %><br>
+            <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
+<!--end of loop -->
+
+<!-- don't think this is needed here, it's a flash notice and should be in application layouts for every page 
+<p id="notice"><%= notice %></p>
+--> 
+
+<%= link_to 'New Listing', new_listing_path, class: "btn btn-link" %>
+  
