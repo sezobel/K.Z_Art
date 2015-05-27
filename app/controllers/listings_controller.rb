@@ -48,6 +48,7 @@ class ListingsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @listing.errors, status: :unprocessable_entity }
       end
+    
     end
   end
 
