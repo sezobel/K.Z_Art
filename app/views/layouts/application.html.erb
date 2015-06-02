@@ -8,10 +8,15 @@
 </head>
 <body>
 
+
 <!--this render below directs to the _header.html.erb  file in layouts which is called a "partial" and helps to simply keep my code cleaner and easier to read and maintain --> 
 <%= render 'layouts/header' %> 
 
 <div class="container">
+
+	<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       
 	<%= yield %>
 <br>	
 <%= render 'layouts/footer'%>

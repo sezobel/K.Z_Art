@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # http://localhost:3000/listings/new
   resources :listings
   get 'pages/about'

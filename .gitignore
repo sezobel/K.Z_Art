@@ -19,4 +19,5 @@
 # Ignore application configuration
 /config/application.yml
 
-
+#ignore files uploaded on local host 
+/public/system 
