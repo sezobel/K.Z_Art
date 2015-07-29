@@ -21,3 +21,5 @@
 
 #ignore files uploaded on local host 
 /public/system 
+
+.DS_Store 

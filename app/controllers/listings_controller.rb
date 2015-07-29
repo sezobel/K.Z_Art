@@ -15,11 +15,10 @@ class ListingsController < ApplicationController
 
   # GET /listings/new
   def new
-    @listing = Listing.new :user_id => current_user.id
-
-    
-
-  end
+    @listing = Listing.new :user_id => current_user
+  @user = User.new
+end
+end
 
   # GET /listings/1/edit
   def edit
@@ -76,4 +75,5 @@ class ListingsController < ApplicationController
     def listing_params
       params.require(:listing).permit(:name, :description, :price, :image, :user_id)
     end
-end
+
+
