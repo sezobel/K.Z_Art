@@ -22,4 +22,6 @@
 #ignore files uploaded on local host 
 /public/system 
 
+#ignore storage with DS.... can randomly update and cause issues 
 .DS_Store 
+
