@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'pages/resume_portfolio'
-  
+
+  get 'users/edit'
+
   root 'listings#index'
 
 end

@@ -21,8 +21,8 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <!-- why won't this "home work or show up" -->
-              <li><%= link_to "Portfolio", listings_path %></li> 
               <li><% link_to "About", pages_about_path %></li>
+              <li><%= link_to "Portfolio", listings_path %></li> 
               <li><%= link_to "Resume", pages_resume_portfolio_path %></li>
               <li><% link_to "Contact", pages_contact_path %></li>
 
@@ -31,7 +31,7 @@
 
               <% if current_user %>
               <!-- how do i shift this sign out button to the right side correctly ?  i know it is a matter of just stacking the code correctly  -->
-
+              <li><%= link_to "Settings", edit_user_registration_path %></li>
               <li><%= link_to 'Sign out', destroy_user_session_path, method: 'delete', class: '' %></li>
               <% else %>
               <li><%= link_to 'Sign in', new_user_session_path, class: '' %></li>
