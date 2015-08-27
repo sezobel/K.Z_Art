@@ -16,6 +16,7 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = Listing.new :user_id => current_user
+    @listing.user_id = current_user.id 
   @user = User.new
 end
 end
