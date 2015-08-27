@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, only: [:new, :create, :update, :destroy]
+  before_filter :check_user, only: [:edit, :update, :destroy]
   # GET /listings
   # GET /listings.json
   def index
@@ -13,13 +14,11 @@ class ListingsController < ApplicationController
 
   end
 
+
   # GET /listings/new
   def new
-    @listing = Listing.new :user_id => current_user
-    @listing.user_id = current_user.id 
-  @user = User.new
-end
-end
+    @listing = Listing.new :user_id => current_user.id
+  end
 
   # GET /listings/1/edit
   def edit
@@ -77,4 +76,12 @@ end
       params.require(:listing).permit(:name, :description, :price, :image, :user_id)
     end
 
+    def check_user
+      if current_user != @listing.user 
+        redirect_to root_url, alert: "Sorry, this is not your listing."
 
+      end 
+    end
+
+
+end
