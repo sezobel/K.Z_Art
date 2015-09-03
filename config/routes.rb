@@ -11,6 +11,12 @@ Rails.application.routes.draw do
 
   get 'users/edit'
 
+  get 'seller' => "listings#seller"
+
   root 'listings#index'
 
+
+
+
 end
+
