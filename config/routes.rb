@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   resources :listings
 
+  resources :orders
+
   get 'pages/about'
 
   get 'pages/contact'
@@ -12,8 +14,6 @@ Rails.application.routes.draw do
   get 'users/edit'
 
   get 'seller' => "listings#seller"
-
-  get 'orders/new'
 
   root 'listings#index'
 
