@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'seller' => "listings#seller"
 
+  get 'orders/new'
+
   root 'listings#index'
 
 
