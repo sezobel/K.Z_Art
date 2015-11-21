@@ -11,12 +11,14 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @params = params
   end
 
   # GET /orders/new
   def new
     @order = Order.new
-    @listing = Listing.find(params[:listing_id])
+    
+    # @listing = Listing.find(params[:listing_id])
   end
 
   # GET /orders/1/edit

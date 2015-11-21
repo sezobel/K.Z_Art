@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+<div class="col-md-14">
+
 <h1>Listing Orders</h1>
 
-<table>
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Address</th>
@@ -18,9 +21,19 @@
         <td><%= order.address %></td>
         <td><%= order.city %></td>
         <td><%= order.state %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<td>
+<div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Edit <span class="caret"></span>
+  </button>
+
+        <ul class="dropdown-menu">
+   <li class="center"> <%= link_to "View", order, class: "btn btn-link" %> </li>
+      <li class="center"><%= link_to "Edit", edit_order_path(order), class: "btn btn-link" %> </li>
+      <li class="center"><%= link_to "Delete", order, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %> </li>
+    </td>
+  </ul>
+</div>
+</td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +41,22 @@
 
 <br>
 
-<%= link_to 'New Order', new_order_path %>
+<%= link_to 'New Order', new_order_path, class: "btn btn-link",  class: "btn btn-primary" %>
+
+</div>
+</table>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+

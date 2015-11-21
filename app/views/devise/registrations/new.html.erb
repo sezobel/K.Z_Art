@@ -31,6 +31,9 @@
   <div class="actions">
     <%= f.submit "Sign up", class: "btn btn-primary" %>
   </div>
+
+    <%= link_to "Already A Memember ? ", new_user_session_path, class: "btn btn-large btn-primary" %>
+
 <% end %>
 
 <%= render "devise/shared/links" %>

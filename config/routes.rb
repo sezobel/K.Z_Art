@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
  
   devise_for :users
+    resources :listings
+
+  resources :orders  do 
+    resources :listings    
+  end 
+
+
   
-  resources :listings do 
-
-  resources :orders
-
-end 
 
   resources :orders
 
