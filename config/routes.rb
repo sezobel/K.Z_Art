@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  resources :user_logins
   devise_for :users
     resources :listings
 
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'pages/resume_portfolio'
+
+  get 'pages/welcome_to'
 
   get 'users/edit'
 

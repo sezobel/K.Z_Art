@@ -1,28 +1,63 @@
-== README
+# (1) potential error - Dec. 15 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+user_logins_controller.rb   
 
-Things you may want to cover:
+created user_login 
+when writing the ruby, may need to change in my new method it from login to logins .. may just need an s on the end to make it plural but not sure. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+pg 192 of rails book  
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
+# (2) user_logins_controller.rb   
+
+
+hashed out this below  
+
+format.json { render :show, status: :ok, location: @user_login }
+
+and replaced with 
+
+format.json { head :no_content }
+
+
+
+# (3) user_logins_controller.rb   
+
+
+def index
+  
+    #@user_logins = UserLogin.all
+    
+    @user_logins = UserLogin.order(:name)
+  
+  end
+
+
+
+  # (4) book pg. 194 editing the user_login_form.html.erb 
+
+  has edits but not sure if i need them or what i should replace 
+
+"depot_form" with ....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

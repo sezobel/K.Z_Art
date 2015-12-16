@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+ 
   def about
   end
 
@@ -7,4 +8,8 @@ class PagesController < ApplicationController
 
   def resume_portfolio
   end
+
+  def welcome_to
+  end
+
 end
