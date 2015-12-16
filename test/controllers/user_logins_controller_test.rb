@@ -18,7 +18,8 @@ class UserLoginsControllerTest < ActionController::TestCase
 
   test "should create user_login" do
     assert_difference('UserLogin.count') do
-      post :create, user_login: { name: @user_login.name, password: 'secret', password_confirmation: 'secret' }
+      post :create, user_login: { name: @user_login.name, password: 'secret', 
+        password_confirmation: 'secret' }
     end
 
     assert_redirected_to user_login_path(assigns(:user_login))

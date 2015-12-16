@@ -47,7 +47,20 @@ def index
 
 
 
+# (5) user_logins_controller.test.rb 
 
+pg. 196 book says to update.. seems to be good 
+
+
+# (6) created 2 controllers 
+
+	sessions 
+	admin index 
+
+
+# (7) sessions_controller.rb 
+
+should it be User.find or User_login.find ???  
 
 
 
