@@ -68,6 +68,14 @@ should it be User.find or User_login.find ???  pg. 197...
 pg. 200 -->>> my routes may be a bit off or may just be the order or have an extra end if there is an error. 
 
 
+status : Dec. 17th at 9:22 -> Ok; everything seems to be working 
+
+admin login works  :  http://localhost:3000/admin/index  
+
+-->> have add to cart button but doesn't add to cart... need to get working 
+
+
+
 
 
 

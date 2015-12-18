@@ -12,9 +12,10 @@ Rails.application.routes.draw do
 
 end 
 
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
+# says i can delete these ? 
+  # get 'sessions/new'
+  # get 'sessions/create'
+  # get 'sessions/destroy'
 
   
 
