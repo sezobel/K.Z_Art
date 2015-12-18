@@ -60,9 +60,12 @@ pg. 196 book says to update.. seems to be good
 
 # (7) sessions_controller.rb 
 
-should it be User.find or User_login.find ???  
+should it be User.find or User_login.find ???  pg. 197... 
 
 
+# (8) config/routes.rb  
+
+pg. 200 -->>> my routes may be a bit off or may just be the order or have an extra end if there is an error. 
 
 
 
